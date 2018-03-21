@@ -58,7 +58,7 @@ class InfluxDBMetricsConfig {
         this.password = props.getString(KAFKA_INFLUX_METRICS_PASSWORD_CONFIG, "root");
         if( props.containsKey(KAFKA_INFLUX_METRICS_CONSISTENCY_CONFIG) )
             this.consistency = props.getString(KAFKA_INFLUX_METRICS_CONSISTENCY_CONFIG);
-        if( props.containsKey(KAFKA_INFLUX_METRICS_TAGS_CONFIG) ) {
+        if( props.containsKey(KAFKA_INFLUX_METRICS_RETENTION_CONFIG) ) {
             this.retention = props.getString(KAFKA_INFLUX_METRICS_RETENTION_CONFIG);
             checkRetentionPolicies();
         }
